@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+Web application that allows you to register a library.
+Project carried out following the yard on Openclassroom "*[Developpez avec Angular](https://openclassrooms.com/courses/developpez-avec-angular)*"
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
