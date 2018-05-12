@@ -15,15 +15,17 @@ import {AuthService} from './services/auth.service';
 import {BooksService} from './services/books.service';
 import {AuthGuardService} from './services/auth-guard.service';
 import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
+    { path: 'home', component: HomeComponent },
     { path: 'auth/signup', component: SignupComponent },
     { path: 'auth/signin', component: SigninComponent },
     { path: 'books', canActivate: [AuthGuardService], component: BookListComponent },
     { path: 'books/new', canActivate: [AuthGuardService], component: BookFormComponent },
     { path: 'books/view/:id', canActivate: [AuthGuardService], component: SingleBookComponent },
-    { path: '', redirectTo: 'books', pathMatch: 'full' },
-    { path: '**', redirectTo: 'books' }
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
         BookListComponent,
         SingleBookComponent,
         BookFormComponent,
-        HeaderComponent
+        HeaderComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
